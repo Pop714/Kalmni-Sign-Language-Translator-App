@@ -13,10 +13,7 @@ The project combines machine learning with interactive 3D visualization to deliv
 
 ▶️ **Watch the app in action:**
 
-[![](assets/test.mp4)](https://github.com/Pop714/Kalmni-Sign-Language-Translator-App/blob/main/assets/test.mp4)
-
-> (GitHub auto-embeds uploaded videos)
-
+https://github.com/user-attachments/assets/732a354c-f2de-43b4-b415-acaf5964a18a
 
 ---
 
