@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_dictionary"
+        android:name="net.alhrairyalbraa.kalmani.ui.dictionary.DictionaryFragment"
+        android:label="fragment_dictionary"
+        tools:layout="@layout/fragment_dictionary" >
+        <action
+            android:id="@+id/action_navigation_dictionary_to_navigation_video"
+            app:destination="@id/navigation_video" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_educate"
+        android:name="net.alhrairyalbraa.kalmani.ui.educational_section.EducationalFragment"
+        android:label="fragment_educational"
+        tools:layout="@layout/fragment_educational" >
+        <action
+            android:id="@+id/action_navigation_educate_to_navigation_category"
+            app:destination="@id/navigation_category" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="net.alhrairyalbraa.kalmani.ui.general.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_cameraFragment2"
+            app:destination="@id/cameraFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_video"
+        android:name="net.alhrairyalbraa.kalmani.ui.general.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" />
+    <fragment
+        android:id="@+id/navigation_category"
+        android:name="net.alhrairyalbraa.kalmani.ui.educational_section.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_navigation_category_to_navigation_video"
+            app:destination="@id/navigation_video" />
+        <action
+            android:id="@+id/action_navigation_category_to_navigation_test"
+            app:destination="@id/navigation_test" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_test"
+        android:name="net.alhrairyalbraa.kalmani.ui.educational_section.TestFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" >
+        <action
+            android:id="@+id/action_navigation_test_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="net.alhrairyalbraa.kalmani.ui.educational_section.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/frag_camera" >
+        <action
+            android:id="@+id/action_cameraFragment_to_navigation_test"
+            app:destination="@id/navigation_test" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment2"
+        android:name="net.alhrairyalbraa.kalmani.ui.main_model.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" />
+
+
+</navigation>

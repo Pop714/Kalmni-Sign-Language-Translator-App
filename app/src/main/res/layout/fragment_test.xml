@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    tools:context=".ui.educational_section.TestFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:id="@+id/mark_anim"
+        android:visibility="invisible"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:indeterminate="true"/>
+
+    <VideoView
+        android:id="@+id/recorded_video"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+
+        android:layout_centerVertical="true"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/character_img"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_marginVertical="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/camera_btn"
+        android:src="@drawable/ic_character"
+        android:contentDescription="@string/baa" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back_arrow"
+        android:src="@drawable/ic_arrow"
+        android:background="@color/transparent"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="10dp"
+        android:padding="3dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="@string/lam" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/camera_btn"
+        android:src="@drawable/ic_camera"
+        android:background="@color/transparent"
+        android:padding="3dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/lam" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/send_btn"
+        android:src="@drawable/ic_send"
+        android:background="@color/transparent"
+        android:padding="3dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/lam" />
+
+</RelativeLayout>

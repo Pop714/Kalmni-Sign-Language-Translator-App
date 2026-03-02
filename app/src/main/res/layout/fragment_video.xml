@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.general.VideoFragment">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back_arrow"
+        android:src="@drawable/ic_arrow_black"
+        android:background="@color/transparent"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="10dp"
+        android:padding="3dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="@string/imageDesc" />
+
+    <TextView
+        android:id="@+id/video_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/circle"
+        android:padding="15dp"
+        android:fontFamily="@font/tajawal_medium"
+        android:text="@string/oneSpeed"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Kalmaninet" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/top_bar</item>
+    </style>
+    <style name="Theme.Kalmaninet" parent="Base.Theme.Kalmaninet" />
+    <!--   ripple style of buttons  -->
+    <style name="RippleStyle">
+        <item name="mrl_rippleOverlay">true</item>
+        <item name="mrl_rippleColor">#80201D1D</item>
+        <item name="mrl_rippleAlpha">0.2</item>
+    </style>
+    <!--  Bottom View  -->
+    <style name="AppBottomNavViewStyle" parent="Widget.Design.BottomNavigationView">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="itemBackground">@null</item>
+    </style>
+    <!--    remove splash screen-->
+    <style name="Theme.RemoveSplashScreenTheme" parent="Base.Theme.Kalmaninet">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>

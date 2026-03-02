@@ -1,0 +1,110 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'de.undercouch.download'
+}
+
+android {
+    namespace 'net.alhrairyalbraa.kalmani'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "net.alhrairyalbraa.kalmani"
+        minSdk 28
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            def properties = new Properties()
+            file("${rootProject.projectDir}/key.properties").withInputStream { properties.load(it) }
+            storeFile = file(properties["signing.keyFile"])
+            keyPassword = properties["signing.keyPassword"]
+            storePassword = properties["signing.storePassword"]
+            keyAlias = properties["signing.alias"]
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix = '.debug'
+            debuggable = true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+        mlModelBinding true
+    }
+}
+
+// import DownloadMPTasks task
+project.ext.ASSET_DIR = projectDir.toString() + '/src/main/assets'
+apply from: 'download_tasks.gradle'
+
+dependencies {
+
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+    // TFLite
+    implementation libs.tensorflow.lite.support
+    implementation libs.tensorflow.lite.metadata
+    // Navigation
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    // Ripple
+    implementation libs.material.ripple
+    // Lottie
+    implementation libs.lottie
+    // OkHTTP
+    implementation libs.okhttp
+    // CameraX
+    implementation libs.androidx.camera.view
+    implementation libs.androidx.camera.video
+    implementation libs.androidx.camera.core
+    implementation libs.androidx.camera.camera2
+    implementation libs.androidx.camera.extensions
+    implementation libs.androidx.camera.lifecycle
+    implementation libs.androidx.camera.viewfinder
+    // Gson
+    implementation libs.gson
+    // Unity
+    implementation project(':unityLibrary')
+    implementation fileTree(dir: project(':unityLibrary').getProjectDir().toString() + ('\\libs'), include: ['*.jar'])
+    // MediaPipe Library
+    implementation libs.tasks.vision
+    // This dependency adds the necessary TF op support.
+    implementation libs.tensorflow.lite.select.tf.ops
+    implementation libs.tensorflow.lite
+
+}

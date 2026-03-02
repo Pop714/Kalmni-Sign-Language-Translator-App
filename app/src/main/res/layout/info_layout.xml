@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/info_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_app"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/tajawal"
+            android:layout_margin="4dp"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_info"
+            android:layout_margin="4dp"
+            android:contentDescription="@string/imageDesc"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginVertical="5dp"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingVertical="10dp"
+        android:src="@drawable/i_home"
+        android:background="@drawable/info_shape"
+        android:contentDescription="@string/imageDesc"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_home"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/tajawal"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:padding="3dp"
+        android:lineSpacingExtra="8dp"
+        tools:ignore="VisualLintLongText" />
+
+    <ImageView
+        android:layout_marginVertical="5dp"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingVertical="10dp"
+        android:src="@drawable/i_dict"
+        android:background="@drawable/info_shape"
+        android:contentDescription="@string/imageDesc"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_dict"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/tajawal"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:lineSpacingExtra="8dp"
+        android:padding="3dp"/>
+
+    <ImageView
+        android:layout_marginVertical="5dp"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingVertical="10dp"
+        android:src="@drawable/i_edu"
+        android:background="@drawable/info_shape"
+        android:contentDescription="@string/imageDesc"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_edu"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/tajawal"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:lineSpacingExtra="8dp"
+        android:padding="3dp"/>
+
+    <LinearLayout
+        android:gravity="end"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="wrap_content"
+            android:text="@string/about_watch"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/tajawal"
+            android:layout_margin="4dp"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play"
+            android:layout_margin="4dp"
+            android:contentDescription="@string/imageDesc"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="wrap_content"
+            android:text="@string/about_test"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/tajawal"
+            android:layout_margin="4dp"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_try"
+            android:layout_margin="4dp"
+            android:contentDescription="@string/imageDesc"/>
+    </LinearLayout>
+
+</LinearLayout>

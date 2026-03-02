@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/top_bar"
+    tools:context=".ui.MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/nav_view"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:background="@null"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/nav_home"
+                android:src="@drawable/ic_home"
+                android:background="@drawable/icon_bottom_clickable"
+                android:contentDescription="@string/imageDesc"
+                android:layout_margin="3dp"
+                android:padding="3dp"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/nav_dictionary"
+                android:src="@drawable/ic_dictionary"
+                android:background="@drawable/icon_bottom_clickable"
+                android:contentDescription="@string/imageDesc"
+                android:layout_margin="3dp"
+                android:padding="3dp"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/nav_education"
+                android:src="@drawable/ic_educational"
+                android:background="@drawable/icon_bottom_clickable"
+                android:contentDescription="@string/imageDesc"
+                android:layout_margin="3dp"
+                android:padding="3dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <fragment
+        android:id="@+id/nav_host_fragment_activity_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nav_view"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation" />
+
+</RelativeLayout>
